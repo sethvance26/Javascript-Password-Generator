@@ -1,26 +1,26 @@
-var specialCharacter = ['@', '%', '+','/',"'",'!','#','$','^','?',';',',',')','(','}','{','}','{','~','-','_','.',];
+var specialCharacter = "@#$%^&*())_+=?><~`";
 
-var lower_chars = ["abcdefghijklmnopqrstuvwxyz"];
+var lower_chars = "abcdefghijklmnopqrstuvwxyz";
 
-var upper_chars = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var upper_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var numbers = ["1234567890"];
+var numbers = "1234567890";
 
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", generatePassword);
 
-var userChoice = [];  //user input for confirms
+ //user input for confirms
 
 var password = ""; //This is the password that gets displayed in textbox
 
-// function writePassword() {
-//   var userChoice = window.prompt("Please enter how many characters you would like your password to consist of:");
-//   var password = generatePassword(userChoice);
-//   var passwordText = document.querySelector("#password");
-//   passwordText.value = password;
-// }
+function writePassword(word) {
+
+  var passwordText = document.querySelector("#password");
+  passwordText.value = word; //word is placeholder for the value of password text (so that something shows up)
+}
 
 function generatePassword() {
+  var userChoice = ""; 
   var passLength = parseInt(window.prompt("How many characters would you like the password to be?"));
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
@@ -30,6 +30,7 @@ function generatePassword() {
     return;
 }
 else if (passLength > 128) {
+  //confirmation for the max characters for password length
   alert("it needs to be less than 129");
   return;
 
@@ -42,10 +43,13 @@ else if (passLength < 8 ) {
 else {
   var isSpecChosen = window.confirm("click OK to confirm including special characters");
   console.log(isSpecChosen);
+
   var isLowerCase = window.confirm("click OK to confirm including lowercase characters");
   console.log(isLowerCase);
+
   var isUpperCase = window.confirm("click OK to confirm including uppercase characters");
   console.log(isUpperCase);
+
   var isNumber = window.confirm("click OK to confirm including numeric characters");
 }
 if (!isSpecChosen && !isLowerCase && !isUpperCase && !isNumber) {
@@ -53,24 +57,29 @@ if (!isSpecChosen && !isLowerCase && !isUpperCase && !isNumber) {
   return;
 
 }
-if (!isSpecChosen){
-  userChoice = user.Choice.concat(specialCharacter);
+if (isSpecChosen) {
+  userChoice = userChoice.concat(specialCharacter);
 }
-if (isLowerCase){
+if (isLowerCase) {
   userChoice = userChoice.concat(lower_chars);
 }
-if (isUpperCase){
+if (isUpperCase) {
   userChoice = userChoice.concat(upper_chars);
 }
-if (isNumber){
+if (isNumber) {
   userChoice = userChoice.concat(numbers);
 }
 console.log(userChoice);
+guessWord(passLength, userChoice)
 }
 
-function password(passLength) {
-  var password = password.length;
-  for ( var i = 0; i < passLength; i++) {
-  passLength += password.chatAt(Math.floor(Math.random() * userChoice));
+function guessWord(length, choice) { //TAKING USER CHOICES AND RANDOMIZING THE ARRAYS IN A FOR LOOP.
+  console.log("Goodnight", length, choice)
+  
+  var password = "";
+  for ( var i = 0; i < length; i++) {
+  password += choice.charAt(Math.floor(Math.random() * choice.length));
+  console.log("Hello", password);
   }
+  writePassword(password)
 }
