@@ -2,24 +2,21 @@
 
 ## Task At Hand
 
-This week, we were tasked with creating an responsive webpage with samples of a 'potential employee's portfolio included. We were also asked to include a name, a recent photo, links to sections about them, and contact information.
+This week, we were tasked with modifying existing code for an password generator application. The starter code that we were given did not allow the application to function correctly, as the "Generate Password" button was unresponsive and no functions ran within the browser.
 
-Since our task acceptance criteria included a layout that responds on various screens and devices, we had to add 
-media queries to make certain breakpoints on our page. Flexbox was also applied on the images as well as text. This was done to ensure everything looked decent even on smaller devices or aspect ratios. 
+We needed to make this application work correctly by adding additional Javascript within the .js file that would allow the application to run in the browser, and generate a password for the user based off of their inputs. 
 
-We also had to style each image to be within a margin, and give each image a class to ensure they looked decent on the page and easy on the eyes.
+Based off of the acceptance criteria for this assignment I had to create an string for each different type of character, and create user prompts for each type of character as well. We were also tasked with ensuring these prompts had validation coded within them as well, to ensure the user chose a password within a specified length. 
 
-Because we haven't done too many projects yet, we used placeholder images from past in-class activites.
+Once I had coded the strings, the prompts with validation, and some conditional statements I had to make sure that the "Generate Password" button also functioned by adding a for loop that would actually input the result of all the user choices into the text box! 
 
-We also added a margin and small border for the article class to give the webpage the same style as the example had.
 
-To ensure that the links still functioned correctly, I made sure that the ID's matched up within the </a href/> tag, as well as the div and nav classes.
 
 ### Complete Product!!
 
-![sample homework2](https://user-images.githubusercontent.com/76290048/110201084-45877500-7e2f-11eb-9760-a622af71b6cf.PNG)
-![Capture2](https://user-images.githubusercontent.com/76290048/110201375-ba0ee380-7e30-11eb-8274-da4af57ca745.PNG)
+![password generator sample](https://user-images.githubusercontent.com/76290048/111056697-27350100-844f-11eb-888e-701505bd1819.PNG)
+
 
 As part of the acceptance criteria, we were told to link our page up with GitHub Pages, and provide a link for the live website as well as an image of our finished product. (Shown above.)
 
-The link for the final product is here! --> https://sethvance26.github.io/Portfolio-Homework/
+The link for the final product is here! --> https://github.com/sethvance26/Javascript-Password-Generator
