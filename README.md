@@ -19,4 +19,4 @@ Once I had coded the strings, the prompts with validation, and some conditional 
 
 As part of the acceptance criteria, we were told to link our page up with GitHub Pages, and provide a link for the live website as well as an image of our finished product. (Shown above.)
 
-The link for the final product is here! --> https://github.com/sethvance26/Javascript-Password-Generator
+The link for the final product is here! ---> https://github.com/sethvance26/Javascript-Password-Generator
